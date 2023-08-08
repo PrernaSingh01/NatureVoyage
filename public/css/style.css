@@ -1,105 +1,186 @@
-body {
+/* Reset default margins and paddings */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
 
+/* Header Styles */
+/* Header Styles */
 header {
-  background-color: #222;
+  background-color: #333;
   color: #fff;
-  padding: 20px;
+  padding: 10px 0;
+  position: relative;
 }
 
-.navbar {
+nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .logo a {
   color: #fff;
   text-decoration: none;
   font-size: 24px;
+  font-weight: bold;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
+  margin: 0;
 }
 
 .nav-links li {
-  margin: 0 10px;
+  margin-right: 20px;
 }
 
-.nav-links li a {
+.nav-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease-in-out;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
-  background-color: #444;
+.nav-links a:hover {
+  color: #3498db;
 }
 
-.hero {
-  background-image: url("/images/sea.jpeg");
-  background-size: cover;
+/* Mobile Menu Styles */
+.mobile-menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+  }
+
+  .logo a {
+    font-size: 30px;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}
+
+/* Nature Section Styles */
+.nature {
+  background: url("/images/nature.jpg") no-repeat center center/cover;
   height: 500px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   color: #fff;
-  animation: scaleHero 0s ease-in-out infinite alternate;
+  animation: fadeIn 1s ease-out;
 }
 
-.hero h1 {
-  font-size: 48px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nature-content {
+  text-align: center;
+}
+
+.nature-content h1 {
+  font-size: 36px;
   margin-bottom: 20px;
-  animation: slideInDown 1s ease-in-out;
+  animation: slideUp 1s ease-out;
 }
 
-.hero p {
-  font-size: 20px;
-  margin-bottom: 30px;
-  animation: slideInUp 1s ease-in-out;
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .cta-btn {
   display: inline-block;
-  background-color: #ff5733;
+  padding: 10px 20px;
+  background-color: #3498db;
   color: #fff;
-  padding: 15px 30px;
   text-decoration: none;
-  font-size: 18px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease-in-out;
-  animation: pulse 2s infinite;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .cta-btn:hover {
-  background-color: #e23c1a;
+  background-color: #2980b9;
 }
 
+/* Features Section Styles */
 .features {
   display: flex;
   justify-content: space-around;
-  padding: 50px;
-  background-color: #f2f2f2;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
 }
 
 .feature {
   text-align: center;
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 20px;
   padding: 20px;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  transition: transform 0.2s ease-in-out;
-  animation: fadeIn 1s ease-in-out;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
 }
 
 .feature h2 {
@@ -109,91 +190,69 @@ header {
 
 .feature p {
   font-size: 16px;
+  color: #777;
 }
 
-.feature:hover {
-  transform: translateY(-5px);
-}
-
+/* CTA Section Styles */
 .cta-section {
   background-color: #f9f9f9;
-  padding: 50px;
   text-align: center;
-  animation: slideInUp 1s ease-in-out;
+  padding: 60px 0;
 }
 
-.cta-content {
-  max-width: 600px;
-  margin: 0 auto;
+.cta-content h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  animation: slideUp 1s ease-out;
 }
 
-.cta-section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.cta-section p {
+.cta-content p {
   font-size: 18px;
   margin-bottom: 30px;
+  color: #777;
+  animation: fadeIn 1s ease-out;
 }
 
 .cta-buttons {
-  display: flex;
-  justify-content: center;
+  animation: slideUp 1s ease-out;
 }
 
-.footer {
-  background-color: #222;
-  color: #fff;
+/* Footer Styles */
+footer {
   text-align: center;
-  padding: 20px;
-  animation: fadeIn 1s ease-in-out;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    z-index: 1;
   }
-  to {
-    opacity: 0.1;
-  }
-}
 
-@keyframes slideInDown {
-  from {
-    transform: translateY(-100px);
+  .nav-links.active {
+    display: flex;
   }
-  to {
-    transform: translateY(0);
-  }
-}
 
-@keyframes slideInUp {
-  from {
-    transform: translateY(100px);
+  .nav-links li {
+    margin: 0;
   }
-  to {
-    transform: translateY(0);
-  }
-}
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
+  .nav-links a {
+    padding: 10px 0;
+    width: 100%;
+    display: block;
   }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
-@keyframes scaleHero {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
+  .logo a {
+    font-size: 30px;
   }
 }
