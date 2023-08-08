@@ -5,9 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("nature-background.jpg") no-repeat center center fixed;
   background-size: cover;
-  animation: animateBg 5s linear infinite;
 }
 
 .container {
@@ -16,16 +14,9 @@ body {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url("img/bg.png") no-repeat;
+  background: url("/images/nature-background.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  animation: animateBg 5s linear infinite;
-}
-
-@keyframes animateBg {
-  100% {
-    filter: hue-rotate(360deg);
-  }
 }
 
 .registration-form {
