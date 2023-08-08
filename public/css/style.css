@@ -113,34 +113,23 @@ nav {
   animation: fadeIn 1s ease-out;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .nature-content {
   text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 .nature-content h1 {
-  font-size: 36px;
+  font-size: 42px;
   margin-bottom: 20px;
   animation: slideUp 1s ease-out;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.nature-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #ddd;
+  animation: fadeIn 1s ease-out;
 }
 
 .cta-btn {
