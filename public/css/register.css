@@ -27,6 +27,7 @@ body {
     filter: hue-rotate(360deg);
   }
 }
+
 .registration-form {
   position: relative;
   width: 400px;
@@ -39,20 +40,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: fadeInUp 1s ease-out;
+  padding: 20px;
 }
 
 .registration-form h1 {
   font-size: 28px;
   margin-bottom: 20px;
   color: #333;
-  animation: fadeIn 1s ease-out;
 }
 
 .input-group {
   position: relative;
   margin-bottom: 20px;
-  animation: slideInUp 1s ease-out;
 }
 
 .input-group input {
@@ -60,7 +59,6 @@ body {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  animation: slideInUp 1s ease-out;
 }
 
 .input-group label {
@@ -84,7 +82,6 @@ body {
 .button-group {
   text-align: center;
   margin-top: 20px;
-  animation: slideInUp 1s ease-out;
 }
 
 .button-group button {
@@ -96,7 +93,6 @@ body {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  animation: slideInUp 1s ease-out;
 }
 
 .button-group button:hover {
