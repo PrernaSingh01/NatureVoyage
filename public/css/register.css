@@ -7,17 +7,7 @@ body {
   min-height: 100vh;
   background: url("nature-background.jpg") no-repeat center center fixed;
   background-size: cover;
-  filter: blur(3px);
-  animation: bgAnimation 20s linear infinite alternate;
-}
-
-@keyframes bgAnimation {
-  0% {
-    filter: blur(3px) hue-rotate(0deg);
-  }
-  100% {
-    filter: blur(3px) hue-rotate(360deg);
-  }
+  animation: animateBg 5s linear infinite;
 }
 
 .container {
@@ -37,7 +27,6 @@ body {
     filter: hue-rotate(360deg);
   }
 }
-
 .registration-form {
   position: relative;
   width: 400px;
