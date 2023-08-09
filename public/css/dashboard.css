@@ -56,28 +56,25 @@ nav {
   color: #3498db;
 }
 
-/* Dashboard Section Styles */
-.dashboard {
-  background-color: #f9f9f9;
-  text-align: center;
-  padding: 60px 0;
-}
-
+/* Dashboard Content Styles */
 .dashboard-content {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
-.dashboard-content h1 {
-  font-size: 36px;
-  margin-bottom: 15px;
-  color: #333;
+.welcome {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.dashboard-content p {
+.welcome h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.welcome p {
   font-size: 18px;
-  margin-bottom: 30px;
   color: #777;
 }
 
