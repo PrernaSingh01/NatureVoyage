@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>NatureVoyage Dashboard</title>
     <link rel="stylesheet" href="/css/dashboard.css" />
   </head>
   <body>
@@ -16,18 +16,38 @@
           <li><a href="#">Dashboard</a></li>
           <li><a href="#">Profile</a></li>
           <li><a href="#">Settings</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><a href="/logout">Logout</a></li>
         </ul>
       </nav>
     </header>
 
     <section class="dashboard-content">
       <div class="welcome">
-        <h1>Welcome to Your Dashboard, {{username}}!</h1>
-        <p>Explore your account details, manage settings, and more.</p>
+        <h1>Welcome to Your NatureVoyage Dashboard, {{username}}!</h1>
+        <p>Explore breathtaking nature destinations, plan your next adventure,
+          and discover hidden gems.</p>
       </div>
 
-      <!-- Add more sections and features here -->
+      <div class="nature-images">
+        <div class="image">
+          <img src="/images/nature1.jpg" alt="Nature Image 1" />
+          <h2>Explore Nature Resorts</h2>
+          <p>Discover luxurious resorts nestled in the heart of pristine natural
+            landscapes.</p>
+        </div>
+        <div class="image">
+          <img src="/images/nature2.jpg" alt="Nature Image 2" />
+          <h2>Adventurous Activities</h2>
+          <p>Embark on thrilling adventures such as hiking, wildlife safaris,
+            and water sports.</p>
+        </div>
+        <div class="image">
+          <img src="/images/nature3.jpg" alt="Nature Image 3" />
+          <h2>Travel Guides</h2>
+          <p>Access comprehensive travel guides to plan your dream nature
+            getaway.</p>
+        </div>
+      </div>
 
     </section>
 

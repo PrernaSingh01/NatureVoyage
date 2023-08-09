@@ -56,6 +56,66 @@ nav {
   color: #3498db;
 }
 
+/* Nature Images Section Styles */
+.nature-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.image {
+  text-align: center;
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 20px;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: translateY(-10px);
+}
+
+.image img {
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  height: auto;
+}
+
+.image:hover img {
+  transform: scale(1.05);
+}
+
+.image h2 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #3498db;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image:hover h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image p {
+  font-size: 16px;
+  color: #777;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Dashboard Content Styles */
 .dashboard-content {
   max-width: 1200px;
