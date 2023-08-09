@@ -14,7 +14,7 @@ body {
 /* Header Styles */
 header {
   background-color: #333;
-  color: #ffffff;
+  color: #fe0000;
   padding: 10px 0;
   position: relative;
 }
@@ -29,7 +29,7 @@ nav {
 }
 
 .logo a {
-  color: #fff;
+  color: #ffff00;
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
@@ -47,7 +47,7 @@ nav {
 }
 
 .nav-links a {
-  color: #fff;
+  color: #ffff00;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -212,5 +212,5 @@ footer {
   text-align: center;
   padding: 20px 0;
   background-color: #333;
-  color: #fff;
+  color: #ffff00;
 }

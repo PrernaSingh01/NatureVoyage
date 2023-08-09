@@ -63,7 +63,8 @@ body {
 
 .button-group {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .button-group button {
