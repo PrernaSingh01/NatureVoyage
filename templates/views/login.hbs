@@ -6,20 +6,30 @@
     <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
+    <!-- Container for the login form -->
     <div class="container">
+      <!-- Login form -->
       <form action="/login" method="post" class="login-form">
+        <!-- Title -->
         <h1>Login</h1>
+
+        <!-- Username input -->
         <div class="input-group">
           <input type="text" id="username" name="username" required />
           <label for="username">Username</label>
         </div>
+
+        <!-- Password input -->
         <div class="input-group">
           <input type="password" id="password" name="password" required />
           <label for="password">Password</label>
         </div>
+
+        <!-- Login button -->
         <div class="button-group">
           <button type="submit">Login</button>
         </div>
+
         <!-- Link to register page -->
         <p style="color: white;">Don't have an account?
           <a href="/register" style="color: aqua;">Register here</a></p>
