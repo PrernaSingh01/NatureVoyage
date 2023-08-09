@@ -6,9 +6,14 @@
     <link rel="stylesheet" href="/css/register.css" />
   </head>
   <body>
+    <!-- Container for the registration form -->
     <div class="container">
+      <!-- Registration form -->
       <form action="register" method="POST" class="registration-form">
+        <!-- Title -->
         <h1>Register</h1>
+
+        <!-- Username input -->
         <div class="input-group">
           <input
             type="text"
@@ -18,8 +23,9 @@
             required
           />
         </div>
-        <div class="input-group">
 
+        <!-- Email input -->
+        <div class="input-group">
           <input
             type="email"
             id="email"
@@ -28,8 +34,9 @@
             required
           />
         </div>
-        <div class="input-group">
 
+        <!-- Password input -->
+        <div class="input-group">
           <input
             type="password"
             id="password"
@@ -38,16 +45,19 @@
             required
           />
         </div>
-        <div class="input-group">
 
+        <!-- Confirm Password input -->
+        <div class="input-group">
           <input
             type="password"
             id="confirm-password"
             name="confirmPassword"
-            placeholder="ConfirmPassword"
+            placeholder="Confirm Password"
             required
           />
         </div>
+
+        <!-- Register button -->
         <div class="button-group">
           <button type="submit" value="Register">Register</button>
         </div>
